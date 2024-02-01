@@ -2,7 +2,7 @@
 //  SignUpView.swift
 //  iChat
 //
-//  Created by EDSON SANTOS on 29/01/2024.
+//  Created by EDSON SANTOS on 01/02/2024.
 //
 
 import SwiftUI
@@ -18,52 +18,35 @@ struct SignUpView: View {
                 .padding()
 
             TextField("Inform your name", text: $viewModel.name)
-                .autocapitalization(.words)
-                .autocorrectionDisabled()
-                .padding()
-                .background(Color.white)
-                .cornerRadius(24.0)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 24.0)
-                        .strokeBorder(Color(UIColor.separator), style: StrokeStyle(lineWidth: 2.0))
-                )
-                .padding(.bottom, 20)
+                .modifier(FieldStyle(autoCapitalization: .words, autoCorretion: true, paddingOption: .bottom, paddingSize: 20, cornerRadiusSize: 24.0, lineWidthSize: 2.0))
             
             
             TextField("Inform your email address", text: $viewModel.email)
-                .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
-                .autocorrectionDisabled()
-                .padding()
-                .background(Color.white)
-                .cornerRadius(24.0)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 24.0)
-                        .strokeBorder(Color(UIColor.separator), style: StrokeStyle(lineWidth: 2.0))
-                )
-                .padding(.bottom, 20)
+                .modifier(FieldStyle(
+                    autoCapitalization: .none,
+                    autoCorretion: true,
+                    paddingOption: .bottom,
+                    paddingSize: 20,
+                    cornerRadiusSize: 24.0,
+                    lineWidthSize: 2.0))
             
             
             SecureField("Inform your password", text: $viewModel.password)
-                .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
-                .autocorrectionDisabled()
-                .padding()
-                .background(Color.white)
-                .cornerRadius(24.0)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 24.0)
-                        .strokeBorder(Color(UIColor.separator), style: StrokeStyle(lineWidth: 2.0))
-                )
-                .padding(.bottom, 30)
+                .modifier(FieldStyle(
+                    autoCapitalization: .none,
+                    autoCorretion: true,
+                    paddingOption: .bottom,
+                    paddingSize: 30,
+                    cornerRadiusSize: 24.0,
+                    lineWidthSize: 2.0))
             
             Button(action: {
                 viewModel.signUp()
             }, label: {
                 Text("Save")
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .background(Color("GreenColor"))
-                    .foregroundColor(.white)
-                    .cornerRadius(24.0)
+                    .modifier(ButtonStyle(cornerRadiusSize: 24.0, 
+                                          backgroundColor: "GreenColor"))
+                  
             })
             
             Divider()
@@ -79,6 +62,8 @@ struct SignUpView: View {
         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity, maxHeight: .infinity/*@END_MENU_TOKEN@*/)
         .padding(.horizontal, 32)
         .background(Color.init(red:240 / 255 , green: 231/255, blue: 210 / 255))
+        .navigationBarTitleDisplayMode(.inline)
+        .foregroundColor(.black)
         .ignoresSafeArea()
     }
 }

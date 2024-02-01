@@ -12,64 +12,59 @@ struct SignInView: View {
     @StateObject var viewModel = SignInViewModel()
     
     var body: some View {
-        VStack {
-            Image("chat_logo")
-                .resizable()
-                .scaledToFit()
-                .padding()
-
-            TextField("Inform your email address", text: $viewModel.email)
-                .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
-                .autocorrectionDisabled()
-                .padding()
-                .background(Color.white)
-                .cornerRadius(24.0)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 24.0)
-                        .strokeBorder(Color(UIColor.separator), style: StrokeStyle(lineWidth: 2.0))
-                )
-                .padding(.bottom, 20)
-            
-            
-            SecureField("Inform your password", text: $viewModel.password)
-                .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
-                .autocorrectionDisabled()
-                .padding()
-                .background(Color.white)
-                .cornerRadius(24.0)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 24.0)
-                        .strokeBorder(Color(UIColor.separator), style: StrokeStyle(lineWidth: 2.0))
-                )
-                .padding(.bottom, 30)
-            
-            Button(action: {
-                viewModel.signIn()
-            }, label: {
-                Text("Sign In")
-                    .frame(maxWidth: .infinity)
+        NavigationView {
+            VStack {
+                Image("chat_logo")
+                    .resizable()
+                    .scaledToFit()
                     .padding()
-                    .background(Color("GreenColor"))
-                    .foregroundColor(.white)
-                    .cornerRadius(24.0)
-            })
-            
-            Divider()
-                .padding()
-            
-            Button(action: {
-                print("Clicked II")
-            }, label: {
-                Text("Don't have an account? Click here!")
-                    .foregroundColor(.black)
-            })
+                
+                TextField("Inform your email address", text: $viewModel.email)
+                    .modifier(FieldStyle(
+                        autoCapitalization: .none,
+                        autoCorretion: true,
+                        paddingOption: .bottom,
+                        paddingSize: 20,
+                        cornerRadiusSize: 24.0,
+                        lineWidthSize: 2.0))
+                
+                
+                
+                
+                SecureField("Inform your password", text: $viewModel.password)
+                    .modifier(FieldStyle(
+                        autoCapitalization: .none,
+                        autoCorretion: true,
+                        paddingOption: .bottom,
+                        paddingSize: 30,
+                        cornerRadiusSize: 24.0,
+                        lineWidthSize: 2.0))
+                   
+                Button(action: {
+                    viewModel.signIn()
+                }, label: {
+                    Text("Sign In")
+                        .modifier(ButtonStyle(cornerRadiusSize: 24.0,
+                                              backgroundColor: "GreenColor"))
+                })
+                
+                Divider()
+                    .padding()
+                
+                NavigationLink(destination: SignUpView(),
+                               label: {
+                    Text("Don't have an account? Click here!")
+                        .foregroundColor(.black)
+                })
+            }
+            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity, maxHeight: .infinity/*@END_MENU_TOKEN@*/)
+            .padding(.horizontal, 32)
+            .background(Color.init(red:240 / 255 , green: 231/255, blue: 210 / 255))
+            .navigationTitle("Login")
+            .navigationBarHidden(true)
+            .ignoresSafeArea()
         }
-        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity, maxHeight: .infinity/*@END_MENU_TOKEN@*/)
-        .padding(.horizontal, 32)
-        .background(Color.init(red:240 / 255 , green: 231/255, blue: 210 / 255))
-        .ignoresSafeArea()
     }
-        
 }
 
 struct ContentView_Previews: PreviewProvider {
