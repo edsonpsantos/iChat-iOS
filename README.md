@@ -8,7 +8,10 @@ The repository contains all code based on an MVVM architecture with Swift and Sw
 ##  🤔 Technologies and Techniques used:
 * Swift
 * Swift UI
-* UI Cupertino Data Edition
+* Cocoapods
+* Firebase
+* FireAuth
+* FireStore
 * Combine
 * MVVM Architecture
 * Good practices
@@ -16,5 +19,8 @@ The repository contains all code based on an MVVM architecture with Swift and Sw
 ##  📱 App screens:
 ![SignIN Screen](https://github.com/edsonpsantos/images/blob/main/iChat/SignIn.png)
 ![SignUN Screen](https://github.com/edsonpsantos/images/blob/main/iChat/SignUpScreen.png)
+
+## Important note:
+🚀 This app is under development, so new features are being created daily.
 
 🙏🏽 Thanks for your attention! 
