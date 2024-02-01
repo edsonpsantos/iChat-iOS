@@ -11,7 +11,7 @@ import SwiftUI
 struct iChatApp: App {
     var body: some Scene {
         WindowGroup {
-            SignInView()
+            SignUpView()
         }
     }
 }
