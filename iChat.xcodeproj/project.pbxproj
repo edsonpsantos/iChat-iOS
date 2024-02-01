@@ -10,25 +10,31 @@
 		2D465E3E2B6BACEE00E112F8 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D465E3D2B6BACEE00E112F8 /* SignUpView.swift */; };
 		2D465E422B6BAEB400E112F8 /* FieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D465E412B6BAEB400E112F8 /* FieldStyle.swift */; };
 		2D465E442B6BB56700E112F8 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D465E432B6BB56700E112F8 /* ButtonStyle.swift */; };
+		2D465E462B6BBB2700E112F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D465E452B6BBB2700E112F8 /* GoogleService-Info.plist */; };
 		2D8CEF9C2B67ECCD00783305 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8CEF9B2B67ECCD00783305 /* SignInViewModel.swift */; };
 		2D8CEFA02B67F90700783305 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8CEF9F2B67F90700783305 /* SignUpViewModel.swift */; };
 		9C0B9A40270F691D00DF2B5F /* iChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0B9A3F270F691D00DF2B5F /* iChatApp.swift */; };
 		9C0B9A42270F691D00DF2B5F /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0B9A41270F691D00DF2B5F /* SignInView.swift */; };
 		9C0B9A44270F692100DF2B5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C0B9A43270F692100DF2B5F /* Assets.xcassets */; };
 		9C0B9A47270F692100DF2B5F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C0B9A46270F692100DF2B5F /* Preview Assets.xcassets */; };
+		9E79B2309FA93BFC0CF078B2 /* Pods_iChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70ECC8BEA015E8CA19868360 /* Pods_iChat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2D465E3D2B6BACEE00E112F8 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		2D465E412B6BAEB400E112F8 /* FieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldStyle.swift; sourceTree = "<group>"; };
 		2D465E432B6BB56700E112F8 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		2D465E452B6BBB2700E112F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2D8CEF9B2B67ECCD00783305 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		2D8CEF9F2B67F90700783305 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		70ECC8BEA015E8CA19868360 /* Pods_iChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		871194572106E38223CA2C4B /* Pods-iChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iChat.debug.xcconfig"; path = "Target Support Files/Pods-iChat/Pods-iChat.debug.xcconfig"; sourceTree = "<group>"; };
 		9C0B9A3C270F691D00DF2B5F /* iChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C0B9A3F270F691D00DF2B5F /* iChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iChatApp.swift; sourceTree = "<group>"; };
 		9C0B9A41270F691D00DF2B5F /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		9C0B9A43270F692100DF2B5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C0B9A46270F692100DF2B5F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DA54370E8036067EF6CC014E /* Pods-iChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iChat.release.xcconfig"; path = "Target Support Files/Pods-iChat/Pods-iChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E79B2309FA93BFC0CF078B2 /* Pods_iChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +138,8 @@
 			children = (
 				9C0B9A3E270F691D00DF2B5F /* iChat */,
 				9C0B9A3D270F691D00DF2B5F /* Products */,
+				A8B5CE10F40EDE5B6B923DB7 /* Pods */,
+				B954F1AB7C155D6332DEDCFC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,6 +154,7 @@
 		9C0B9A3E270F691D00DF2B5F /* iChat */ = {
 			isa = PBXGroup;
 			children = (
+				2D465E452B6BBB2700E112F8 /* GoogleService-Info.plist */,
 				2D465E3F2B6BAE9300E112F8 /* Common */,
 				2D465E392B6BA58500E112F8 /* SignUp */,
 				2D465E352B6BA54D00E112F8 /* SignIn */,
@@ -163,6 +173,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		A8B5CE10F40EDE5B6B923DB7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				871194572106E38223CA2C4B /* Pods-iChat.debug.xcconfig */,
+				DA54370E8036067EF6CC014E /* Pods-iChat.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B954F1AB7C155D6332DEDCFC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				70ECC8BEA015E8CA19868360 /* Pods_iChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,9 +197,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C0B9A4A270F692100DF2B5F /* Build configuration list for PBXNativeTarget "iChat" */;
 			buildPhases = (
+				B0115599B93B826D32D0E7F9 /* [CP] Check Pods Manifest.lock */,
 				9C0B9A38270F691D00DF2B5F /* Sources */,
 				9C0B9A39270F691D00DF2B5F /* Frameworks */,
 				9C0B9A3A270F691D00DF2B5F /* Resources */,
+				DA5CDDC795E5DE582B18F358 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -223,10 +252,53 @@
 			files = (
 				9C0B9A47270F692100DF2B5F /* Preview Assets.xcassets in Resources */,
 				9C0B9A44270F692100DF2B5F /* Assets.xcassets in Resources */,
+				2D465E462B6BBB2700E112F8 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B0115599B93B826D32D0E7F9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA5CDDC795E5DE582B18F358 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iChat/Pods-iChat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iChat/Pods-iChat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iChat/Pods-iChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9C0B9A38270F691D00DF2B5F /* Sources */ = {
@@ -366,14 +438,18 @@
 		};
 		9C0B9A4B270F692100DF2B5F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 871194572106E38223CA2C4B /* Pods-iChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iChat/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = iChat;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -385,7 +461,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = co.tiagoaguiar.tutorial.iChat;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.edsonsantos.iChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -395,14 +471,18 @@
 		};
 		9C0B9A4C270F692100DF2B5F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA54370E8036067EF6CC014E /* Pods-iChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iChat/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = iChat;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -414,7 +494,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = co.tiagoaguiar.tutorial.iChat;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.edsonsantos.iChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

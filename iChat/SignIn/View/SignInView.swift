@@ -39,7 +39,12 @@ struct SignInView: View {
                         paddingSize: 30,
                         cornerRadiusSize: 24.0,
                         lineWidthSize: 2.0))
-                   
+                
+                if viewModel.isLoading{
+                    ProgressView()
+                        .padding()
+                }
+                
                 Button(action: {
                     viewModel.signIn()
                 }, label: {
@@ -47,6 +52,10 @@ struct SignInView: View {
                         .modifier(ButtonStyle(cornerRadiusSize: 24.0,
                                               backgroundColor: "GreenColor"))
                 })
+                
+                .alert(isPresented: $viewModel.formInvalid){
+                    Alert(title: Text(viewModel.alertText))
+                }
                 
                 Divider()
                     .padding()

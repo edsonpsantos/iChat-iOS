@@ -40,6 +40,11 @@ struct SignUpView: View {
                     cornerRadiusSize: 24.0,
                     lineWidthSize: 2.0))
             
+            if viewModel.isLoading {
+                ProgressView()
+                    .padding()
+            }
+            
             Button(action: {
                 viewModel.signUp()
             }, label: {
@@ -48,16 +53,10 @@ struct SignUpView: View {
                                           backgroundColor: "GreenColor"))
                   
             })
+            .alert(isPresented: $viewModel.formInvalid) {
+                Alert(title: Text(viewModel.alertText))
+            }
             
-            Divider()
-                .padding()
-            
-            Button(action: {
-                print("Clicked II")
-            }, label: {
-                Text("Do you have an account? Sign In Here!")
-                    .foregroundColor(.black)
-            })
         }
         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity, maxHeight: .infinity/*@END_MENU_TOKEN@*/)
         .padding(.horizontal, 32)
