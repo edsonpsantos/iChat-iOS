@@ -9,14 +9,35 @@ import SwiftUI
 
 struct SignUpView: View {
     @StateObject var viewModel = SignUpViewModel()
+    @State var isShowPhotoLibrary = false
     
     var body: some View {
         VStack {
-            Image("chat_logo")
-                .resizable()
-                .scaledToFit()
-                .padding()
-
+            Button {
+                isShowPhotoLibrary = true
+            } label: {
+                if viewModel.image.size.width > 0 {
+                    Image(uiImage: viewModel.image)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 150, height: 150)
+                        .clipShape(Circle())
+                        .overlay(Circle().stroke(Color("GreenColor"), lineWidth: 4))
+                        .shadow(radius: 7)
+                } else {
+                    Text("Photo")
+                        .frame(width: 150, height: 150)
+                        .padding()
+                        .background(Color("GreenColor"))
+                        .foregroundColor(.white)
+                        .cornerRadius(100.0)
+                }
+            }
+            .padding(.bottom, 32)
+            .sheet(isPresented: $isShowPhotoLibrary, content: {
+                ImagePickerView(selectedImage: $viewModel.image)
+            })
+            
             TextField("Inform your name", text: $viewModel.name)
                 .modifier(FieldStyle(autoCapitalization: .words, autoCorretion: true, paddingOption: .bottom, paddingSize: 20, cornerRadiusSize: 24.0, lineWidthSize: 2.0))
             
@@ -49,9 +70,9 @@ struct SignUpView: View {
                 viewModel.signUp()
             }, label: {
                 Text("Save")
-                    .modifier(ButtonStyle(cornerRadiusSize: 24.0, 
+                    .modifier(ButtonStyle(cornerRadiusSize: 24.0,
                                           backgroundColor: "GreenColor"))
-                  
+                
             })
             .alert(isPresented: $viewModel.formInvalid) {
                 Alert(title: Text(viewModel.alertText))
