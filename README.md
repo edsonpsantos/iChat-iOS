@@ -8,7 +8,10 @@ The repository contains all code based on an MVVM architecture with Swift and Sw
 ##  🤔 Technologies and Techniques used:
 * Swift
 * Swift UI
-* UI Cupertino Data Edition
+* Cocoapods
+* Firebase
+* FireAuth
+* FireStore
 * Combine
 * MVVM Architecture
 * Good practices
