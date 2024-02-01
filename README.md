@@ -14,6 +14,7 @@ The repository contains all code based on an MVVM architecture with Swift and Sw
 * Good practices
 
 ##  📱 App screens:
-
+![SignIN Screen](https://github.com/edsonpsantos/images/blob/main/iChat/SignIn.png)
+![SignUN Screen](https://github.com/edsonpsantos/images/blob/main/iChat/SignUpScreen.png)
 
 🙏🏽 Thanks for your attention! 
