@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyBKLvFU8HqF6KwAJBxlImMPloQz6Oft4HI</string>
+	<string>YOUR API_KEY</string>
 	<key>GCM_SENDER_ID</key>
-	<string>510819319425</string>
+	<string>YOUR GCM_SENDER_ID</string>
 	<key>PLIST_VERSION</key>
 	<string>2</string>
 	<key>BUNDLE_ID</key>
-	<string>br.com.edsonsantos.iChat</string>
+	<string>YOUR BUNDLE_ID</string>
 	<key>PROJECT_ID</key>
-	<string>ichat-35683</string>
+	<string>YOUR PROJECT_ID</string>
 	<key>STORAGE_BUCKET</key>
-	<string>ichat-35683.appspot.com</string>
+	<string>YOUR STORAGE_BUCKET</string>
 	<key>IS_ADS_ENABLED</key>
 	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:510819319425:ios:9555d2fae89621fe481780</string>
+	<string>YOUR GOOGLE_APP_ID</string>
 </dict>
 </plist>
