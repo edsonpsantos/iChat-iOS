@@ -10,8 +10,8 @@ import FirebaseAuth
 
 class SignInViewModel: ObservableObject{
     
-    var email: String = ""
-    var password: String = ""
+    @Published var email: String = ""
+    @Published var password: String = ""
    
     @Published var formInvalid = false
     var alertText = ""
