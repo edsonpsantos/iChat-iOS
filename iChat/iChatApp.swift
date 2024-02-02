@@ -13,11 +13,12 @@ struct iChatApp: App {
     
     init() {
         FirebaseApp.configure()
+        
     }
     
     var body: some Scene {
         WindowGroup {
-            SignInView()
+            ContentView()
         }
     }
 }
