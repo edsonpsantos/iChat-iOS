@@ -28,9 +28,6 @@ struct SignInView: View {
                         cornerRadiusSize: 24.0,
                         lineWidthSize: 2.0))
                 
-                
-                
-                
                 SecureField("Inform your password", text: $viewModel.password)
                     .modifier(FieldStyle(
                         autoCapitalization: .none,
@@ -50,7 +47,7 @@ struct SignInView: View {
                 }, label: {
                     Text("Sign In")
                         .modifier(ButtonStyle(cornerRadiusSize: 24.0,
-                                              backgroundColor: "GreenColor"))
+                                              backgroundColor: "MainColor"))
                 })
                 
                 .alert(isPresented: $viewModel.formInvalid){
@@ -66,12 +63,14 @@ struct SignInView: View {
                         .foregroundColor(.black)
                 })
             }
-            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity, maxHeight: .infinity/*@END_MENU_TOKEN@*/)
-            .padding(.horizontal, 32)
-            .background(Color.init(red:240 / 255 , green: 231/255, blue: 210 / 255))
+            .modifier(StackStyle(
+                paddingSize: 32,
+                backgroundColorRed: 162,
+                backgroundColorGreen: 172,
+                backgroundColorBlue:189))
             .navigationTitle("Login")
             .navigationBarHidden(true)
-            .ignoresSafeArea()
+
         }
     }
 }

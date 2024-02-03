@@ -17,6 +17,10 @@
 		2D51D8C52B6D7FBA00EA0D07 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D51D8C42B6D7FBA00EA0D07 /* MessageViewModel.swift */; };
 		2D8CEF9C2B67ECCD00783305 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8CEF9B2B67ECCD00783305 /* SignInViewModel.swift */; };
 		2D8CEFA02B67F90700783305 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8CEF9F2B67F90700783305 /* SignUpViewModel.swift */; };
+		2DBA59FD2B6E499D0052842D /* StackStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA59FC2B6E499D0052842D /* StackStyle.swift */; };
+		2DBA5A032B6E54780052842D /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA5A022B6E54780052842D /* ContactsView.swift */; };
+		2DBA5A052B6E54BB0052842D /* ContactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA5A042B6E54BB0052842D /* ContactsViewModel.swift */; };
+		2DBA5A072B6E554C0052842D /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA5A062B6E554C0052842D /* ContactModel.swift */; };
 		2DE57C132B6BE2BD00400A8D /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE57C122B6BE2BD00400A8D /* ImagePickerView.swift */; };
 		9C0B9A40270F691D00DF2B5F /* iChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0B9A3F270F691D00DF2B5F /* iChatApp.swift */; };
 		9C0B9A42270F691D00DF2B5F /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0B9A41270F691D00DF2B5F /* SignInView.swift */; };
@@ -36,6 +40,10 @@
 		2D51D8C42B6D7FBA00EA0D07 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		2D8CEF9B2B67ECCD00783305 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		2D8CEF9F2B67F90700783305 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		2DBA59FC2B6E499D0052842D /* StackStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackStyle.swift; sourceTree = "<group>"; };
+		2DBA5A022B6E54780052842D /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
+		2DBA5A042B6E54BB0052842D /* ContactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewModel.swift; sourceTree = "<group>"; };
+		2DBA5A062B6E554C0052842D /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
 		2DE57C122B6BE2BD00400A8D /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		70ECC8BEA015E8CA19868360 /* Pods_iChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		871194572106E38223CA2C4B /* Pods-iChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iChat.debug.xcconfig"; path = "Target Support Files/Pods-iChat/Pods-iChat.debug.xcconfig"; sourceTree = "<group>"; };
@@ -140,6 +148,7 @@
 			children = (
 				2D465E412B6BAEB400E112F8 /* FieldStyle.swift */,
 				2D465E432B6BB56700E112F8 /* ButtonStyle.swift */,
+				2DBA59FC2B6E499D0052842D /* StackStyle.swift */,
 			);
 			path = Modifier;
 			sourceTree = "<group>";
@@ -210,6 +219,40 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		2DBA59FE2B6E54550052842D /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				2DBA5A012B6E54690052842D /* View */,
+				2DBA5A002B6E54640052842D /* ViewModel */,
+				2DBA59FF2B6E545C0052842D /* Model */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		2DBA59FF2B6E545C0052842D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2DBA5A062B6E554C0052842D /* ContactModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2DBA5A002B6E54640052842D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2DBA5A042B6E54BB0052842D /* ContactsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2DBA5A012B6E54690052842D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2DBA5A022B6E54780052842D /* ContactsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		9C0B9A33270F691D00DF2B5F = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +274,7 @@
 		9C0B9A3E270F691D00DF2B5F /* iChat */ = {
 			isa = PBXGroup;
 			children = (
+				2DBA59FE2B6E54550052842D /* Contacts */,
 				2D51D8BE2B6D7F3C00EA0D07 /* Message */,
 				2D51D8B82B6D7D7100EA0D07 /* Content */,
 				2D51D8B62B6D7D3E00EA0D07 /* GoogleService-Info.plist */,
@@ -385,15 +429,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D465E422B6BAEB400E112F8 /* FieldStyle.swift in Sources */,
+				2DBA59FD2B6E499D0052842D /* StackStyle.swift in Sources */,
 				9C0B9A42270F691D00DF2B5F /* SignInView.swift in Sources */,
 				2D8CEFA02B67F90700783305 /* SignUpViewModel.swift in Sources */,
+				2DBA5A072B6E554C0052842D /* ContactModel.swift in Sources */,
 				9C0B9A40270F691D00DF2B5F /* iChatApp.swift in Sources */,
 				2D51D8BD2B6D7DA000EA0D07 /* ContentViewModel.swift in Sources */,
 				2DE57C132B6BE2BD00400A8D /* ImagePickerView.swift in Sources */,
+				2DBA5A052B6E54BB0052842D /* ContactsViewModel.swift in Sources */,
 				2D51D8C32B6D7F5E00EA0D07 /* MessageView.swift in Sources */,
 				2D51D8B32B6D7CCA00EA0D07 /* ContentView.swift in Sources */,
 				2D465E3E2B6BACEE00E112F8 /* SignUpView.swift in Sources */,
 				2D8CEF9C2B67ECCD00783305 /* SignInViewModel.swift in Sources */,
+				2DBA5A032B6E54780052842D /* ContactsView.swift in Sources */,
 				2D51D8C52B6D7FBA00EA0D07 /* MessageViewModel.swift in Sources */,
 				2D465E442B6BB56700E112F8 /* ButtonStyle.swift in Sources */,
 			);
@@ -539,7 +587,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -572,7 +620,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

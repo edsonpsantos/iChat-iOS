@@ -22,13 +22,13 @@ struct SignUpView: View {
                         .scaledToFill()
                         .frame(width: 150, height: 150)
                         .clipShape(Circle())
-                        .overlay(Circle().stroke(Color("GreenColor"), lineWidth: 4))
+                        .overlay(Circle().stroke(Color("MainColor"), lineWidth: 4))
                         .shadow(radius: 7)
                 } else {
                     Text("Photo")
                         .frame(width: 150, height: 150)
                         .padding()
-                        .background(Color("GreenColor"))
+                        .background(Color("MainColor"))
                         .foregroundColor(.white)
                         .cornerRadius(100.0)
                 }
@@ -71,7 +71,7 @@ struct SignUpView: View {
             }, label: {
                 Text("Save")
                     .modifier(ButtonStyle(cornerRadiusSize: 24.0,
-                                          backgroundColor: "GreenColor"))
+                                          backgroundColor: "MainColor"))
                 
             })
             .alert(isPresented: $viewModel.formInvalid) {
@@ -79,12 +79,10 @@ struct SignUpView: View {
             }
             
         }
-        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity, maxHeight: .infinity/*@END_MENU_TOKEN@*/)
-        .padding(.horizontal, 32)
-        .background(Color.init(red:240 / 255 , green: 231/255, blue: 210 / 255))
-        .navigationBarTitleDisplayMode(.inline)
-        .foregroundColor(.black)
-        .ignoresSafeArea()
+        .modifier(StackStyle(paddingSize: 32, 
+                             backgroundColorRed: 162,
+                             backgroundColorGreen: 172,
+                             backgroundColorBlue:189))
     }
 }
 
