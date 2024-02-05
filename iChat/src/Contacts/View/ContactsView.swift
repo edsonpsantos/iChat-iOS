@@ -13,17 +13,25 @@ struct ContactsView: View {
     
     var body: some View {
         VStack{
+            if viewModel.isLoading {
+                ProgressView()
+            }
+            
             List(viewModel.contacts, id: \.self){ contact in
-                ContactRow(contact: contact)
+                NavigationLink(
+                    destination: ChatView(userName: contact.name),
+                    label: {
+                        ContactRow(contact: contact)
+                    })
             }
         }.onAppear{
             viewModel.getContacts()
         }
+        .navigationTitle("Contacts")
     }
 }
 
 struct ContactRow: View {
-    
     var contact: ContactModel
     
     var body: some View {
@@ -32,12 +40,12 @@ struct ContactRow: View {
                 image
                     .resizable()
                     .scaledToFit()
-                    
+                
             } placeholder: {
                 ProgressView()
             }
             .frame(width: 50, height: 50)
-                             
+            
             Text(contact.name)
         }
     }

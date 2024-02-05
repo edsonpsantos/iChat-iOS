@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D10AF042B7114BA00FECA6B /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D10AF032B7114BA00FECA6B /* MessageModel.swift */; };
+		2D10AF062B71152200FECA6B /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D10AF052B71152200FECA6B /* ChatViewModel.swift */; };
+		2D10AF0C2B71164A00FECA6B /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D10AF0B2B71164A00FECA6B /* ChatView.swift */; };
 		2D465E3E2B6BACEE00E112F8 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D465E3D2B6BACEE00E112F8 /* SignUpView.swift */; };
 		2D465E422B6BAEB400E112F8 /* FieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D465E412B6BAEB400E112F8 /* FieldStyle.swift */; };
 		2D465E442B6BB56700E112F8 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D465E432B6BB56700E112F8 /* ButtonStyle.swift */; };
@@ -30,6 +33,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D10AF032B7114BA00FECA6B /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		2D10AF052B71152200FECA6B /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		2D10AF0B2B71164A00FECA6B /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		2D465E3D2B6BACEE00E112F8 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		2D465E412B6BAEB400E112F8 /* FieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldStyle.swift; sourceTree = "<group>"; };
 		2D465E432B6BB56700E112F8 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
@@ -67,6 +73,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D10AF022B7113D800FECA6B /* src */ = {
+			isa = PBXGroup;
+			children = (
+				2D10AF072B71162A00FECA6B /* Chat */,
+				2D465E352B6BA54D00E112F8 /* SignIn */,
+				2D465E392B6BA58500E112F8 /* SignUp */,
+				2D465E3F2B6BAE9300E112F8 /* Common */,
+				2D51D8B82B6D7D7100EA0D07 /* Content */,
+				2D51D8BE2B6D7F3C00EA0D07 /* Message */,
+				2DBA59FE2B6E54550052842D /* Contacts */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		2D10AF072B71162A00FECA6B /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				2D10AF0A2B71163B00FECA6B /* View */,
+				2D10AF092B71163500FECA6B /* ViewModel */,
+				2D10AF082B71163100FECA6B /* Model */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		2D10AF082B71163100FECA6B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2D10AF092B71163500FECA6B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2D10AF052B71152200FECA6B /* ChatViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2D10AF0A2B71163B00FECA6B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2D10AF0B2B71164A00FECA6B /* ChatView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		2D465E352B6BA54D00E112F8 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +252,7 @@
 		2D51D8BF2B6D7F4600EA0D07 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2D10AF032B7114BA00FECA6B /* MessageModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -274,13 +328,8 @@
 		9C0B9A3E270F691D00DF2B5F /* iChat */ = {
 			isa = PBXGroup;
 			children = (
-				2DBA59FE2B6E54550052842D /* Contacts */,
-				2D51D8BE2B6D7F3C00EA0D07 /* Message */,
-				2D51D8B82B6D7D7100EA0D07 /* Content */,
+				2D10AF022B7113D800FECA6B /* src */,
 				2D51D8B62B6D7D3E00EA0D07 /* GoogleService-Info.plist */,
-				2D465E3F2B6BAE9300E112F8 /* Common */,
-				2D465E392B6BA58500E112F8 /* SignUp */,
-				2D465E352B6BA54D00E112F8 /* SignIn */,
 				9C0B9A3F270F691D00DF2B5F /* iChatApp.swift */,
 				9C0B9A43270F692100DF2B5F /* Assets.xcassets */,
 				9C0B9A45270F692100DF2B5F /* Preview Content */,
@@ -428,9 +477,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D10AF0C2B71164A00FECA6B /* ChatView.swift in Sources */,
 				2D465E422B6BAEB400E112F8 /* FieldStyle.swift in Sources */,
 				2DBA59FD2B6E499D0052842D /* StackStyle.swift in Sources */,
 				9C0B9A42270F691D00DF2B5F /* SignInView.swift in Sources */,
+				2D10AF062B71152200FECA6B /* ChatViewModel.swift in Sources */,
 				2D8CEFA02B67F90700783305 /* SignUpViewModel.swift in Sources */,
 				2DBA5A072B6E554C0052842D /* ContactModel.swift in Sources */,
 				9C0B9A40270F691D00DF2B5F /* iChatApp.swift in Sources */,
@@ -438,6 +489,7 @@
 				2DE57C132B6BE2BD00400A8D /* ImagePickerView.swift in Sources */,
 				2DBA5A052B6E54BB0052842D /* ContactsViewModel.swift in Sources */,
 				2D51D8C32B6D7F5E00EA0D07 /* MessageView.swift in Sources */,
+				2D10AF042B7114BA00FECA6B /* MessageModel.swift in Sources */,
 				2D51D8B32B6D7CCA00EA0D07 /* ContentView.swift in Sources */,
 				2D465E3E2B6BACEE00E112F8 /* SignUpView.swift in Sources */,
 				2D8CEF9C2B67ECCD00783305 /* SignInViewModel.swift in Sources */,
