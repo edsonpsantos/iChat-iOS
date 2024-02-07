@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ChatView: View {
+    let toId: String
     let userName: String
     
     @StateObject var viewModel = ChatViewModel()
@@ -34,7 +35,9 @@ struct ChatView: View {
                                           style: StrokeStyle(lineWidth: 1.0))
                     }
                 
-                Button(action: {}, label: {
+                Button(action: {
+                    viewModel.sendMessage(toId: toId)
+                }, label: {
                     Text("Send")
                         .padding()
                         .background(Color("MainColor"))
@@ -48,6 +51,9 @@ struct ChatView: View {
         }
         .navigationTitle(userName)
         .navigationBarTitleDisplayMode(.inline)
+        .onAppear(){
+            viewModel.onAppear(toId: toId)
+        }
     }
 }
 
@@ -55,18 +61,22 @@ struct MessageRow: View {
     let message: MessageModel
     
     var body: some View {
-        Text(message.text)
-            .background(Color(white: 0.95))
-            .frame(maxWidth: .infinity,
-                   alignment: message.isMe ? .leading: .trailing)
-            .lineLimit(nil)
-            .fixedSize(horizontal: false, vertical: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
-            .padding(.leading, message.isMe ? 0 : 50)
-            .padding(.trailing, message.isMe ? 50 : 0)
-            .padding(.vertical,5)
+        VStack(alignment: .leading) {
+            Text(message.text)
+                .padding(.vertical,5)
+                .lineLimit(nil)
+                .fixedSize(horizontal: false, vertical: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+                .padding(.horizontal, 10)
+                .background(Color(white: 0.95))
+                .frame(maxWidth: 260,
+                       alignment: message.isMe ? .leading: .trailing)
+                //.padding(.leading, message.isMe ? 0 : 50)
+                //.padding(.trailing, message.isMe ? 50 : 0)
+        }
+        .frame(maxWidth: .infinity, alignment: message.isMe ? .leading: .trailing)
     }
 }
 
 #Preview {
-    ChatView(userName: "Hello!")
+    ChatView(toId: UUID().uuidString, userName: "Hello!")
 }
