@@ -13,15 +13,30 @@ import FirebaseFirestore
 class ChatViewModel: ObservableObject {
     
     @Published var messages:[MessageModel] = []
-    
     @Published var text = ""
     
-    func onAppear(toId: String){
+    var myName = ""
+    var myPhoto = ""
+    
+    func onAppear(contact: ContactModel){
         let fromId = Auth.auth().currentUser!.uid
+        
+        Firestore.firestore().collection("users")
+            .document(fromId)
+            .getDocument{snapshot, error in
+                if let error = error {
+                    print("ERROR: fetching document: \(error.localizedDescription)!")
+                    return
+                }
+                if let document = snapshot?.data(){
+                    self.myName = document["name"] as! String
+                    self.myPhoto = document["profileUrl"] as! String
+                }
+            }
         
         Firestore.firestore().collection("conversations")
             .document(fromId)
-            .collection(toId)
+            .collection(contact.uuid)
             .order(by: "timestamp", descending: false)
             .addSnapshotListener { querySnapshot, error in
                 if let error = error{
@@ -43,39 +58,63 @@ class ChatViewModel: ObservableObject {
             }
     }
     
-    func sendMessage(toId: String){
+    func sendMessage(contact: ContactModel){
         let fromId = Auth.auth().currentUser!.uid
         let timestamp = Date().timeIntervalSince1970
         
         Firestore.firestore().collection("conversations")
             .document(fromId)
-            .collection(toId)
+            .collection(contact.uuid)
             .addDocument(data: [
                 "text": text,
                 "fromId": fromId,
-                "toId": toId,
+                "toId": contact.uuid,
                 "timestamp": UInt(timestamp)
             ]){ error in
                 if error != nil{
                     print("ERROR: \(String(describing: error!.localizedDescription))")
                     return
                 }
+                
+                Firestore.firestore().collection("last-messages")
+                    .document(fromId)
+                    .collection("contacts")
+                    .document(contact.uuid)
+                    .setData([
+                        "uuid": contact.uuid,
+                        "username": contact.name,
+                        "photoUrl": contact.profileUrl,
+                        "timestamp": UInt(timestamp),
+                        "lastMessage": self.text
+                    ])
             }
         
         
         Firestore.firestore().collection("conversations")
-            .document(toId)
+            .document(contact.uuid)
             .collection(fromId)
             .addDocument(data: [
                 "text": text,
                 "fromId": fromId,
-                "toId": toId,
+                "toId": contact.uuid,
                 "timestamp": UInt(timestamp)
             ]){ error in
                 if error != nil{
                     print("ERROR: \(String(describing: error?.localizedDescription))")
                     return
                 }
+                
+                Firestore.firestore().collection("last-messages")
+                    .document(contact.uuid)
+                    .collection("contacts")
+                    .document(fromId)
+                    .setData([
+                        "uuid": fromId,
+                        "username": self.myName,
+                        "photoUrl": self.myPhoto,
+                        "timestamp": UInt(timestamp),
+                        "lastMessage": self.text
+                    ])
             }
     }
     

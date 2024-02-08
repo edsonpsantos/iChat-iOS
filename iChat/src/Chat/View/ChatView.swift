@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct ChatView: View {
-    let toId: String
-    let userName: String
     
+    let contact: ContactModel
+   
     @StateObject var viewModel = ChatViewModel()
     
     
@@ -31,12 +31,12 @@ struct ChatView: View {
                     .cornerRadius(24.0)
                     .overlay {
                         RoundedRectangle(cornerRadius: 24.0)
-                            .strokeBorder(Color(UIColor.separator), 
+                            .strokeBorder(Color(UIColor.separator),
                                           style: StrokeStyle(lineWidth: 1.0))
                     }
                 
                 Button(action: {
-                    viewModel.sendMessage(toId: toId)
+                    viewModel.sendMessage(contact: contact)
                 }, label: {
                     Text("Send")
                         .padding()
@@ -49,10 +49,10 @@ struct ChatView: View {
             .padding(.vertical, 10)
             .padding(.horizontal, 16)
         }
-        .navigationTitle(userName)
+        .navigationTitle(contact.name)
         .navigationBarTitleDisplayMode(.inline)
         .onAppear(){
-            viewModel.onAppear(toId: toId)
+            viewModel.onAppear(contact: contact)
         }
     }
 }
@@ -70,13 +70,15 @@ struct MessageRow: View {
                 .background(Color(white: 0.95))
                 .frame(maxWidth: 260,
                        alignment: message.isMe ? .leading: .trailing)
-                //.padding(.leading, message.isMe ? 0 : 50)
-                //.padding(.trailing, message.isMe ? 50 : 0)
+            //.padding(.leading, message.isMe ? 0 : 50)
+            //.padding(.trailing, message.isMe ? 50 : 0)
         }
         .frame(maxWidth: .infinity, alignment: message.isMe ? .leading: .trailing)
     }
 }
 
+
 #Preview {
-    ChatView(toId: UUID().uuidString, userName: "Hello!")
+    ChatView(contact: ContactModel(uuid: UUID().uuidString, name: "José Carlos", profileUrl: ""))
 }
+

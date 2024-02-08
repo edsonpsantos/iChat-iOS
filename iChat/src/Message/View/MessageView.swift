@@ -16,8 +16,21 @@ struct MessageView: View {
         
         NavigationView {
             VStack{
-                Text("Hello Messages")
+                if viewModel.isLoading{
+                    ProgressView()
+                }
+                List(viewModel.contacts, id: \.self){contact in
+                    NavigationLink{
+                        ChatView(contact: contact)
+                    } label: {
+                        ContactMessageRow(contact: contact)
+                    }
+                }
             }
+            .onAppear{
+                viewModel.getContacts()
+            }
+            .navigationTitle("Messages")
             .toolbar {
                 ToolbarItem(id: "contents", 
                             placement: ToolbarItemPlacement.navigationBarTrailing,
@@ -38,6 +51,29 @@ struct MessageView: View {
         
         Spacer()
       
+    }
+}
+
+struct ContactMessageRow: View {
+    var contact:ContactModel
+    var body: some View{
+        HStack{
+            AsyncImage(url: URL(string: contact.profileUrl)){ image in
+                image
+                    .resizable()
+                    .scaledToFit()
+            } placeholder: {
+                ProgressView()
+            }.frame(width: 50, height: 50)
+            
+            VStack(alignment: .leading){
+                Text(contact.name)
+                if let msg = contact.lastMessage{
+                    Text(msg)
+                }
+            }
+            Spacer()
+        }
     }
 }
 
