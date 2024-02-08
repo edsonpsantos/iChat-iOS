@@ -12,7 +12,7 @@ struct ChatView: View {
     let contact: ContactModel
    
     @StateObject var viewModel = ChatViewModel()
-    
+    @State var textSize: CGSize = .zero
     
     var body: some View {
         VStack{
@@ -23,17 +23,32 @@ struct ChatView: View {
             })
             Spacer()
             HStack{
-                TextField("Write your message", text: $viewModel.text)
-                    .autocapitalization(.none)
-                    .disableAutocorrection(false)
-                    .padding()
-                    .background(.white)
-                    .cornerRadius(24.0)
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 24.0)
-                            .strokeBorder(Color(UIColor.separator),
-                                          style: StrokeStyle(lineWidth: 1.0))
+                ZStack {
+                    TextEditor(text: $viewModel.text)
+                        .autocapitalization(.none)
+                        .disableAutocorrection(false)
+                        .padding()
+                        .background(.white)
+                        .cornerRadius(24.0)
+                        .overlay {
+                            RoundedRectangle(cornerRadius: 24.0)
+                                .strokeBorder(Color(UIColor.separator),
+                                              style: StrokeStyle(lineWidth: 1.0))
                     }
+                        .frame(maxHeight: (textSize.height + 50) > 100 ? 100 : textSize.height + 50 )
+                    
+                    Text(viewModel.text)
+                        .opacity(0.0)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .background(ViewGeometry())
+                        .lineLimit(4)
+                        .multilineTextAlignment(.leading)
+                        .padding(.horizontal, 21)
+                        .onPreferenceChange(ViewSizeKey.self){ size in
+                            print("textsize is \(size)")
+                            textSize = size
+                        }
+                }
                 
                 Button(action: {
                     viewModel.sendMessage(contact: contact)
@@ -54,6 +69,28 @@ struct ChatView: View {
         .onAppear(){
             viewModel.onAppear(contact: contact)
         }
+    }
+}
+
+//Invisible view to background
+// Listen height and size component
+struct ViewGeometry: View {
+    var body: some View {
+        GeometryReader{ geometry in
+            Color.clear
+                .preference(key: ViewSizeKey.self, value: geometry.size)
+        }
+    }
+}
+
+//Get the prev value and pass the nextValue. Sum new values to the height value
+struct ViewSizeKey: PreferenceKey {
+
+    static var defaultValue: CGSize = .zero
+    
+    static func reduce(value: inout Value, nextValue: () -> Value) {
+        print("New value is \(value)")
+        value = nextValue()
     }
 }
 
@@ -79,6 +116,8 @@ struct MessageRow: View {
 
 
 #Preview {
-    ChatView(contact: ContactModel(uuid: UUID().uuidString, name: "José Carlos", profileUrl: ""))
+    ChatView(contact: ContactModel(uuid: UUID().uuidString, 
+                                   name: "José Carlos",
+                                   profileUrl: ""))
 }
 
