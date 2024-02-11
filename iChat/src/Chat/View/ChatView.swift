@@ -20,22 +20,34 @@ struct ChatView: View {
         VStack{
             ScrollViewReader{ value in
                 ScrollView(showsIndicators: false, content: {
-                    ForEach(viewModel.messages, id: \.self){ message in
-                        MessageRow(message: message)
-                    }
-                    .onChange(of: viewModel.messages.count, perform: { newValue in
-                        print("Count in \(newValue)")
-                        withAnimation {
-                            value.scrollTo(buttonID)
-                        }
-                    })
-                    .padding(.horizontal, 28)
-                   
                     //GhostView to scrollReader with scrollTo: id
                     Color.clear
                         .frame(height: 1)
                         .id(buttonID)
+                    
+                    LazyVStack{
+                        ForEach(viewModel.messages, id: \.self){ message in
+                            MessageRow(message: message)
+                                .scaleEffect(x:1.0, y: -1.0, anchor:.center)
+                                .onAppear{
+                                    if message == viewModel.messages.last && viewModel.messages.count >= viewModel.limit{
+                                        viewModel.onAppear(contact: contact)
+                                    }
+                                }
+                        }
+                        .onChange(of: viewModel.newCount){ newValue in
+                            print("Count in \(newValue)")
+                            if newValue > viewModel.messages.count{
+                                withAnimation {
+                                    value.scrollTo(buttonID)
+                                }
+                            }
+                        }
+                        .padding(.horizontal, 28)
+                    }
                 })
+                .rotationEffect(Angle(degrees: 180))
+                .scaleEffect(x:-1.0, y: 1.0, anchor: .center)
             }
             Spacer()
             HStack{
