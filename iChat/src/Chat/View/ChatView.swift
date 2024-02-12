@@ -11,7 +11,7 @@ struct ChatView: View {
     
     let contact: ContactModel
    
-    @StateObject var viewModel = ChatViewModel()
+    @StateObject var viewModel = ChatViewModel(repo: ChatRepository())
     @State var textSize: CGSize = .zero
     
     @Namespace var buttonID
@@ -30,7 +30,8 @@ struct ChatView: View {
                             MessageRow(message: message)
                                 .scaleEffect(x:1.0, y: -1.0, anchor:.center)
                                 .onAppear{
-                                    if message == viewModel.messages.last && viewModel.messages.count >= viewModel.limit{
+                                    if message == viewModel.messages.last && 
+                                        viewModel.messages.count >= viewModel.limit{
                                         viewModel.onAppear(contact: contact)
                                     }
                                 }

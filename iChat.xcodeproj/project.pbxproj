@@ -21,10 +21,15 @@
 		2D8CEF9C2B67ECCD00783305 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8CEF9B2B67ECCD00783305 /* SignInViewModel.swift */; };
 		2D8CEFA02B67F90700783305 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8CEF9F2B67F90700783305 /* SignUpViewModel.swift */; };
 		2DBA59FD2B6E499D0052842D /* StackStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA59FC2B6E499D0052842D /* StackStyle.swift */; };
-		2DBA5A032B6E54780052842D /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA5A022B6E54780052842D /* ContactsView.swift */; };
-		2DBA5A052B6E54BB0052842D /* ContactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA5A042B6E54BB0052842D /* ContactsViewModel.swift */; };
+		2DBA5A032B6E54780052842D /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA5A022B6E54780052842D /* ContactView.swift */; };
+		2DBA5A052B6E54BB0052842D /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA5A042B6E54BB0052842D /* ContactViewModel.swift */; };
 		2DBA5A072B6E554C0052842D /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA5A062B6E554C0052842D /* ContactModel.swift */; };
 		2DE57C132B6BE2BD00400A8D /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE57C122B6BE2BD00400A8D /* ImagePickerView.swift */; };
+		2DF0729A2B7A337B00412AB5 /* SignInRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF072992B7A337B00412AB5 /* SignInRepository.swift */; };
+		2DF0729C2B7A372700412AB5 /* SignUpRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF0729B2B7A372700412AB5 /* SignUpRepository.swift */; };
+		2DF0729F2B7A3B2600412AB5 /* MessageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF0729E2B7A3B2600412AB5 /* MessageRepository.swift */; };
+		2DF072A22B7A3D3500412AB5 /* ContactRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF072A12B7A3D3500412AB5 /* ContactRepository.swift */; };
+		2DF072A42B7A3F8200412AB5 /* ChatRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF072A32B7A3F8200412AB5 /* ChatRepository.swift */; };
 		9C0B9A40270F691D00DF2B5F /* iChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0B9A3F270F691D00DF2B5F /* iChatApp.swift */; };
 		9C0B9A42270F691D00DF2B5F /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0B9A41270F691D00DF2B5F /* SignInView.swift */; };
 		9C0B9A44270F692100DF2B5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C0B9A43270F692100DF2B5F /* Assets.xcassets */; };
@@ -47,10 +52,15 @@
 		2D8CEF9B2B67ECCD00783305 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		2D8CEF9F2B67F90700783305 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		2DBA59FC2B6E499D0052842D /* StackStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackStyle.swift; sourceTree = "<group>"; };
-		2DBA5A022B6E54780052842D /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
-		2DBA5A042B6E54BB0052842D /* ContactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewModel.swift; sourceTree = "<group>"; };
+		2DBA5A022B6E54780052842D /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
+		2DBA5A042B6E54BB0052842D /* ContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
 		2DBA5A062B6E554C0052842D /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
 		2DE57C122B6BE2BD00400A8D /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		2DF072992B7A337B00412AB5 /* SignInRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRepository.swift; sourceTree = "<group>"; };
+		2DF0729B2B7A372700412AB5 /* SignUpRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRepository.swift; sourceTree = "<group>"; };
+		2DF0729E2B7A3B2600412AB5 /* MessageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRepository.swift; sourceTree = "<group>"; };
+		2DF072A12B7A3D3500412AB5 /* ContactRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRepository.swift; sourceTree = "<group>"; };
+		2DF072A32B7A3F8200412AB5 /* ChatRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRepository.swift; sourceTree = "<group>"; };
 		70ECC8BEA015E8CA19868360 /* Pods_iChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		871194572106E38223CA2C4B /* Pods-iChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iChat.debug.xcconfig"; path = "Target Support Files/Pods-iChat/Pods-iChat.debug.xcconfig"; sourceTree = "<group>"; };
 		9C0B9A3C270F691D00DF2B5F /* iChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,7 +90,7 @@
 				2D465E352B6BA54D00E112F8 /* SignIn */,
 				2D465E392B6BA58500E112F8 /* SignUp */,
 				2D465E3F2B6BAE9300E112F8 /* Common */,
-				2D51D8B82B6D7D7100EA0D07 /* Content */,
+				2D51D8B82B6D7D7100EA0D07 /* Splash */,
 				2D51D8BE2B6D7F3C00EA0D07 /* Message */,
 				2DBA59FE2B6E54550052842D /* Contacts */,
 			);
@@ -92,16 +102,17 @@
 			children = (
 				2D10AF0A2B71163B00FECA6B /* View */,
 				2D10AF092B71163500FECA6B /* ViewModel */,
-				2D10AF082B71163100FECA6B /* Model */,
+				2D10AF082B71163100FECA6B /* Repository */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
 		};
-		2D10AF082B71163100FECA6B /* Model */ = {
+		2D10AF082B71163100FECA6B /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				2DF072A32B7A3F8200412AB5 /* ChatRepository.swift */,
 			);
-			path = Model;
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		2D10AF092B71163500FECA6B /* ViewModel */ = {
@@ -125,17 +136,9 @@
 			children = (
 				2D465E382B6BA56F00E112F8 /* View */,
 				2D465E372B6BA56900E112F8 /* ViewModel */,
-				2D465E362B6BA55B00E112F8 /* Model */,
+				2DF072982B7A336800412AB5 /* Repository */,
 			);
 			path = SignIn;
-			sourceTree = "<group>";
-		};
-		2D465E362B6BA55B00E112F8 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Model;
-			path = "../New Group/Model";
 			sourceTree = "<group>";
 		};
 		2D465E372B6BA56900E112F8 /* ViewModel */ = {
@@ -159,16 +162,17 @@
 			children = (
 				2D465E3C2B6BA59500E112F8 /* View */,
 				2D465E3B2B6BA58F00E112F8 /* ViewModel */,
-				2D465E3A2B6BA58B00E112F8 /* Model */,
+				2D465E3A2B6BA58B00E112F8 /* Respository */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
 		};
-		2D465E3A2B6BA58B00E112F8 /* Model */ = {
+		2D465E3A2B6BA58B00E112F8 /* Respository */ = {
 			isa = PBXGroup;
 			children = (
+				2DF0729B2B7A372700412AB5 /* SignUpRepository.swift */,
 			);
-			path = Model;
+			path = Respository;
 			sourceTree = "<group>";
 		};
 		2D465E3B2B6BA58F00E112F8 /* ViewModel */ = {
@@ -206,14 +210,14 @@
 			path = Modifier;
 			sourceTree = "<group>";
 		};
-		2D51D8B82B6D7D7100EA0D07 /* Content */ = {
+		2D51D8B82B6D7D7100EA0D07 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
 				2D51D8BB2B6D7D9000EA0D07 /* View */,
 				2D51D8BA2B6D7D8400EA0D07 /* ViewModel */,
 				2D51D8B92B6D7D7900EA0D07 /* Model */,
 			);
-			path = Content;
+			path = Splash;
 			sourceTree = "<group>";
 		};
 		2D51D8B92B6D7D7900EA0D07 /* Model */ = {
@@ -242,6 +246,7 @@
 		2D51D8BE2B6D7F3C00EA0D07 /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				2DF0729D2B7A3B1700412AB5 /* Repository */,
 				2D51D8C12B6D7F5400EA0D07 /* View */,
 				2D51D8C02B6D7F4D00EA0D07 /* ViewModel */,
 				2D51D8BF2B6D7F4600EA0D07 /* Model */,
@@ -276,6 +281,7 @@
 		2DBA59FE2B6E54550052842D /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
+				2DF072A02B7A3D2800412AB5 /* Repository */,
 				2DBA5A012B6E54690052842D /* View */,
 				2DBA5A002B6E54640052842D /* ViewModel */,
 				2DBA59FF2B6E545C0052842D /* Model */,
@@ -294,7 +300,7 @@
 		2DBA5A002B6E54640052842D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				2DBA5A042B6E54BB0052842D /* ContactsViewModel.swift */,
+				2DBA5A042B6E54BB0052842D /* ContactViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -302,9 +308,33 @@
 		2DBA5A012B6E54690052842D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2DBA5A022B6E54780052842D /* ContactsView.swift */,
+				2DBA5A022B6E54780052842D /* ContactView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		2DF072982B7A336800412AB5 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				2DF072992B7A337B00412AB5 /* SignInRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		2DF0729D2B7A3B1700412AB5 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				2DF0729E2B7A3B2600412AB5 /* MessageRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		2DF072A02B7A3D2800412AB5 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				2DF072A12B7A3D3500412AB5 /* ContactRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		9C0B9A33270F691D00DF2B5F = {
@@ -484,16 +514,21 @@
 				2D10AF062B71152200FECA6B /* ChatViewModel.swift in Sources */,
 				2D8CEFA02B67F90700783305 /* SignUpViewModel.swift in Sources */,
 				2DBA5A072B6E554C0052842D /* ContactModel.swift in Sources */,
+				2DF072A42B7A3F8200412AB5 /* ChatRepository.swift in Sources */,
 				9C0B9A40270F691D00DF2B5F /* iChatApp.swift in Sources */,
 				2D51D8BD2B6D7DA000EA0D07 /* ContentViewModel.swift in Sources */,
+				2DF0729A2B7A337B00412AB5 /* SignInRepository.swift in Sources */,
+				2DF0729C2B7A372700412AB5 /* SignUpRepository.swift in Sources */,
 				2DE57C132B6BE2BD00400A8D /* ImagePickerView.swift in Sources */,
-				2DBA5A052B6E54BB0052842D /* ContactsViewModel.swift in Sources */,
+				2DBA5A052B6E54BB0052842D /* ContactViewModel.swift in Sources */,
 				2D51D8C32B6D7F5E00EA0D07 /* MessageView.swift in Sources */,
 				2D10AF042B7114BA00FECA6B /* MessageModel.swift in Sources */,
+				2DF072A22B7A3D3500412AB5 /* ContactRepository.swift in Sources */,
 				2D51D8B32B6D7CCA00EA0D07 /* ContentView.swift in Sources */,
 				2D465E3E2B6BACEE00E112F8 /* SignUpView.swift in Sources */,
+				2DF0729F2B7A3B2600412AB5 /* MessageRepository.swift in Sources */,
 				2D8CEF9C2B67ECCD00783305 /* SignInViewModel.swift in Sources */,
-				2DBA5A032B6E54780052842D /* ContactsView.swift in Sources */,
+				2DBA5A032B6E54780052842D /* ContactView.swift in Sources */,
 				2D51D8C52B6D7FBA00EA0D07 /* MessageViewModel.swift in Sources */,
 				2D465E442B6BB56700E112F8 /* ButtonStyle.swift in Sources */,
 			);

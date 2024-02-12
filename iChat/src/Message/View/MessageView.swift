@@ -10,7 +10,7 @@ import Combine
 
 struct MessageView: View {
     
-    @StateObject var viewModel = MessageViewModel()
+    @StateObject var viewModel = MessageViewModel(repo: MessageRepository())
     
     var body: some View {
         
@@ -28,14 +28,18 @@ struct MessageView: View {
                 }
             }
             .onAppear{
+                viewModel.handleEnabled(enable: true)
                 viewModel.getContacts()
+            }
+            .onDisappear{
+                viewModel.handleEnabled(enable: false)
             }
             .navigationTitle("Messages")
             .toolbar {
                 ToolbarItem(id: "contents", 
                             placement: ToolbarItemPlacement.navigationBarTrailing,
                             showsByDefault: true) {
-                    NavigationLink("Contacts", destination: ContactsView())
+                    NavigationLink("Contacts", destination: ContactView())
                 }
                 ToolbarItem(id:"logout",
                             placement:ToolbarItemPlacement.navigationBarTrailing,
