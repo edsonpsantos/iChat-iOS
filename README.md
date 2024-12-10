@@ -17,13 +17,13 @@ The repository contains all code based on an MVVM architecture with Swift and Sw
 * Good practices
 
 ##  📱 App screens:
-![SignIN Screen](https://github.com/edsonpsantos/images/blob/main/iChat/SignIn.png)
-![SignUN Screen](https://github.com/edsonpsantos/images/blob/main/iChat/SignUp.png)
-![SignUN Screen](https://github.com/edsonpsantos/images/blob/main/iChat/ProflePicture.png)
-![SignUN Screen](https://github.com/edsonpsantos/images/blob/main/iChat/ContactList.png)
-![SignUN Screen](https://github.com/edsonpsantos/images/blob/main/iChat/Message1.png)
-![SignUN Screen](https://github.com/edsonpsantos/images/blob/main/iChat/MessagesReceived.png)
-![SignUN Screen](https://github.com/edsonpsantos/images/blob/main/iChat/MessageAwnsered.png)
+![SignIN Screen](https://github.com/edsonpsantos/images/blob/main/ios_images/iChat/SignIn.png)
+![SignUN Screen](https://github.com/edsonpsantos/images/blob/main/ios_images/iChat/SignUp.png)
+![SignUN Screen](https://github.com/edsonpsantos/images/blob/main/ios_images/iChat/ProflePicture.png)
+![SignUN Screen](https://github.com/edsonpsantos/images/blob/main/ios_images/iChat/ContactList.png)
+![SignUN Screen](https://github.com/edsonpsantos/images/blob/main/ios_images/iChat/Message1.png)
+![SignUN Screen](https://github.com/edsonpsantos/images/blob/main/ios_images/iChat/MessagesReceived.png)
+![SignUN Screen](https://github.com/edsonpsantos/images/blob/main/ios_images/iChat/MessageAwnsered.png)
 
 ## Important note:
 The GoogleService-Info.plist file is NOT added to the project.
